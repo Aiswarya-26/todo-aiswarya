@@ -21,7 +21,7 @@ function renderTasks(filter = 'all') {
       <strong>${task.title}</strong> (${task.priority}) <br>
       ${task.description || ''}<br>
       Due: ${task.dueDate ? new Date(task.dueDate).toLocaleString() : 'None'}<br>
-      <button onclick="toggleComplete(${index})">✔</button>
+      <button onclick="toggleComplete(${index})">${task.completed ? '↩️' : '✔️'}</button>
       <button onclick="deleteTask(${index})">🗑</button>
     `;
     taskList.appendChild(li);
